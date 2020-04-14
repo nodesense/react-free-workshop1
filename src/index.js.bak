@@ -1,0 +1,29 @@
+// first file to be loaded into browser
+
+import ReactDOM from 'react-dom';
+import React from 'react';
+
+console.log('starting react');
+
+// Patch the REAL DOM
+// Runs the event loop
+// v.dom ==> real dom (uni direction)
+// ReactDOM.render(v.dom, real dom)
+
+// v.dom element NOT A COMPONENT
+//const h1 = React.createElement('h1', {id: 'myheader'}, "Welcome")
+
+// Smaller Functional component
+
+function App() {
+    // return v.dom
+    // if this function called, you will be creating v.dom
+    // return v.dom
+    return React.createElement('h1', {id: 'myheader'}, "Welcome React")
+}
+
+// real dom
+const root = document.getElementById('root');
+
+// bootstrap react into browser
+ReactDOM.render(React.createElement(App), root);
