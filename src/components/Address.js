@@ -1,7 +1,9 @@
 //src/components/Address.js
+import React from 'react';
 
 // props = { address: {city, state}}
 function Address(props) {
+    console.log('Address props', props)
     return (
         <div>
             <p>Address</p>
