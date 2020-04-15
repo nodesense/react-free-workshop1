@@ -114,9 +114,12 @@ class Calc extends Component {
         this.forceUpdate();
     }
 
-    bubble  = () => {
-        console.log('bubble button');
+    bubble  = (event) => {
+        event.stopPropagation();
+        //preventDefault()
+        console.log('bubble button click');
         this.forceUpdate();
+
     }
 
     render() {
