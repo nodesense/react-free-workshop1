@@ -8,7 +8,11 @@ Date     :  April 13, 2020 to April 17, 2020
 ```
 
 
+
 # Youtube
+
+Video/Audio is not edited, I have uploaded them as is.
+
 
 - Day 1  https://www.youtube.com/watch?v=5V35TBC2uds
 - Day 2 https://www.youtube.com/watch?v=wQEtZILPi6A
