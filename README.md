@@ -7,6 +7,14 @@ Time     :  7:00 PM to 9:30 PM IST
 Date     :  April 13, 2020 to April 17, 2020
 ```
 
+# JOIN Professional React Redux Program
+
+Anyone interested to be part of Full Fledged, Project Oriented
+Professional React Redux Coding Boot camp, you can register here. 
+
+
+https://www.townscript.com/e/react-redux-bootcamp-213142
+
 
 
 # Youtube
