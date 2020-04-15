@@ -7,7 +7,7 @@ function Address(props) {
     return (
         <div>
             <p>Address</p>
-            <p>city: {props.address.city} </p>
+    {props.address && props.address.city && <p>city: {props.address.city} </p> }
             <p>state: {props.address.state} </p>
         </div>
     )

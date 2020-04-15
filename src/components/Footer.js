@@ -47,7 +47,7 @@ function Footer(props) {
     )
 }
 
-// ES5, static
+// ES5 synctic, static/functional 
 // react keyword propTypes
 Footer.propTypes = {
     // enforce the datatypes correct 
