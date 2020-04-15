@@ -66,6 +66,9 @@ class Calc extends Component {
         // async, means, the new state eventually merged with current state, later
         // the function provided is not invoked in the same event cycle
         // invoked before render function call, at the end of the event loop
+
+        // first function setstate shall receive current state as input
+        // return new state
         this.setState((prevState) => {
             console.log('functional setState prevState ', prevState);
             return {
@@ -73,6 +76,7 @@ class Calc extends Component {
             }
         })
 
+        // new state returned by prev func setState is passed as input
         // result of prev function is passed as input here
         // end result shall be merged with currentState
         this.setState( (prevState) => {
@@ -83,6 +87,36 @@ class Calc extends Component {
         })
 
         console.log('incrememtB after', this.state);
+    }
+
+    // the first argument is an event object
+    // preventDefault, stopProbagation // stop event bubble up
+    // synthetic event, event pool, react is reusing the event object
+    reset = (event) => {
+        console.log('Reset ', event);
+        this.setState({
+            a: 0,
+            b: 0,
+            result: 0
+        })
+
+        //print callstack
+        console.trace() ; // not to be used across cross browser
+    }
+
+    divClick = (event) => {
+        console.log('divClick ', event);
+        console.trace(); //// not to be used across cross browser
+
+        // this.setState({
+        //     flag: true
+        // })
+        this.forceUpdate();
+    }
+
+    bubble  = () => {
+        console.log('bubble button');
+        this.forceUpdate();
     }
 
     render() {
@@ -98,6 +132,14 @@ class Calc extends Component {
 
                 <button onClick={this.incrementA}>Incr A</button>
                 <button onClick={this.incrementB}>Incr B</button>
+
+                
+                    <button onClick={this.reset}>Reset</button>
+
+                <div onClick={this.divClick}>
+                <button onClick={this.bubble}>Bubble</button>
+
+                </div>
 
             </div>
         )

@@ -71,3 +71,23 @@ let h1Tag = <h1>Welcome</h1>
         - patch
         - Garbage collector should track objects in memory
         - release the memory
+
+# When react calls RENDER, when react Merge the state [func, {}]
+
+    React main a event loop/queue, FIFO
+
+    all events are added to queue [click, bubble click]
+
+    [event1, event2, ................................ evnet1000]
+
+    batch the event, requestAnimationFramework..
+    batch [event1, event2]
+        each event has eventHandler [increment, decrement, reset, incrA,.....]
+        it calls the event handlers
+                event handlers call setState.. batch of states to be merge
+
+    end of the batch/when no event in the queue
+        merge the state, set to current state [this.state become active]
+        calls render  function
+
+40 fps - 1 scene updated every 25 ms
