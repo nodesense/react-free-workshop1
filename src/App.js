@@ -17,16 +17,45 @@ import Calc from './components/Calc';
 // if App component destroyed, Header/Children comp destroyed
 // Relationship: App is parent component
 //               Header, Footer are children component of App
-function App() {
+class App extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          startValue: 0
+      }
+  }
+
+  // define function in the parent component
+  // pass the function as a callback through props to child component
+  reset = () => {
+      console.log('reset called by child');
+
+     this.setState({
+         startValue: 0
+     })
+  }
+
+  submit = (value) => {
+      console.log('called by child ', value)
+    this.setState({
+        startValue: value
+    })
+  }
+
+  render() {
     console.log('App render');
     return (
         <div>
            <Header />
 
-            <Calc />
-            <Counter startValue={100} />
-            
+            <p>App startValue {this.state.startValue}</p> 
 
+            <Counter startValue={this.state.startValue} 
+                     reset={this.reset}
+                     submit={this.submit}           
+            />
+
+            <Calc />            
             <Home />
            <Footer year={ 2020 }
                     
@@ -44,6 +73,7 @@ function App() {
                    />
         </div>
     )
+}
 }
 
 export default App;

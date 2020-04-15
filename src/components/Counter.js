@@ -137,6 +137,10 @@ class Counter extends React.Component {
 
                 <button onClick={this.increment}>Incr</button>
                 <button onClick={this.decrement}>Decr</button>
+
+                <button onClick={() => this.props.submit(this.state.counter)}>submit to parent</button>
+                <button onClick={this.props.reset}>Reset to parent</button>
+                
             </div>
         )
     }
