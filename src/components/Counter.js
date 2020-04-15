@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 class Counter extends React.Component {
     // ES.NEXT, safe to use
     // ES Stage 2
-    // possible only in class component
+    // possible only in class component, not in functional
     static propTypes = {
         startValue: PropTypes.number //optional
     }

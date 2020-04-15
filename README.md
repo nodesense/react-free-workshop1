@@ -60,3 +60,14 @@ let h1Tag = <h1>Welcome</h1>
 - react conventions - props
 
     <Footer year={2020} company="NodeSense" >
+
+# REACT DEVELOPER
+ 
+ -- stop calling render unnessarily
+ -- be convervative with render function calls
+ -- when render called?
+        - create virtual doms, a lot of javascript objects created
+        - React does DIFFing, deep compare the tree, that component render and also child render
+        - patch
+        - Garbage collector should track objects in memory
+        - release the memory

@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Counter from './components/Counter';
+import Calc from './components/Calc';
 
 // called by react
 // create v.dom and return v.dom
@@ -22,6 +23,7 @@ function App() {
         <div>
            <Header />
 
+            <Calc />
             <Counter startValue={100} />
             
 
