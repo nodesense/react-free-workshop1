@@ -23,8 +23,7 @@ function App() {
            <Header />
 
             <Counter startValue={100} />
-
-            <Counter   />
+            
 
             <Home />
            <Footer year={ 2020 }
