@@ -1,8 +1,8 @@
 // CartItem.js
-import React, {Component} from "react";
+import React, {PureComponent, Component} from "react";
 import PropTypes from "prop-types";
 
-class CartItem extends Component {
+class CartItem extends PureComponent {
     constructor(props) {
         super(props);
     }
@@ -12,7 +12,7 @@ class CartItem extends Component {
     //TODO: state from props, qty
    
     render() {
-        let {item} = this.props;
+        let {item, removeItem, updateItem} = this.props;
 
         console.log("CartItem Render ", item.id);
 
@@ -23,16 +23,18 @@ class CartItem extends Component {
                 <td>{item.qty}</td>
                 <td>{item.price * item.qty}</td>
                 <td> 
-                <button onClick={() => {} }>
+                <button onClick={() => updateItem(item.id, item.qty + 1) }>
                         +1
                 </button>    
 
-                <button onClick={ () => {} }>
+                <button onClick={ () =>  updateItem(item.id, item.qty - 1) }>
                         -1
                 </button>    
-                <button onClick={ () => {} }>
+
+                <button onClick={ () => removeItem(item.id) }>
                         X
                 </button>
+
                 </td>
             </tr>
         )

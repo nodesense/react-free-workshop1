@@ -69,7 +69,7 @@ class Calc extends Component {
 
         // first function setstate shall receive current state as input
         // return new state
-        this.setState((prevState) => {
+        this.setState((prevState, props) => {
             console.log('functional setState prevState ', prevState);
             return {
                 b: prevState.b + 1

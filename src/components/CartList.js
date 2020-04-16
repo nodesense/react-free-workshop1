@@ -1,13 +1,13 @@
 // CartList.js
 
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 
 import CartItem from "./CartItem";
 
- //TODO: PureComponent
+ //TODO: PureComponent implements shouldComponentUpdate
 
- class CartList extends Component {
+ class CartList extends PureComponent {
     constructor(props) {
         super(props);
     }
@@ -17,7 +17,9 @@ import CartItem from "./CartItem";
     render() {
         console.log("CartList Render");
 
-        let {items} = this.props;
+        let {items, 
+            updateItem,
+            removeItem } = this.props;
 
         return (
             <div> 
@@ -33,8 +35,22 @@ import CartItem from "./CartItem";
                     </tr>
                 </thead>
                 <tbody>
-                    {/* TODO props items map with CartItem */ }
+                    {/* TODO props items map with CartItem
+                        key is react word
+                        for helping react diff function
+                        based on unique key
 
+                        react uses key before step into deep comparison
+                    */ }
+                    {
+                        items.map (item => (
+                            <CartItem key={item.id} 
+                                      item = {item}
+                                       removeItem={removeItem}
+                                       updateItem={updateItem}
+                            />
+                        ))
+                    }
                 </tbody>
             </table>
             </div>

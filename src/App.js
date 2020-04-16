@@ -7,6 +7,8 @@ import Home from './components/Home';
 import Counter from './components/Counter';
 import Calc from './components/Calc';
 
+import Cart from './components/Cart';
+
 // called by react
 // create v.dom and return v.dom
 // Application is a component
@@ -48,15 +50,17 @@ class App extends React.Component {
         <div>
            <Header />
 
-            <p>App startValue {this.state.startValue}</p> 
+           <Cart />
 
+            <p>App startValue {this.state.startValue}</p> 
+{/* 
             <Counter startValue={this.state.startValue} 
                      reset={this.reset}
                      submit={this.submit}           
             />
 
             <Calc />            
-            <Home />
+            <Home /> */}
            <Footer year={ 2020 }
                     
                    isOpen
