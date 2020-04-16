@@ -27,8 +27,6 @@ Video/Audio is not edited, uploaded them as is.
 - Day 3 https://www.youtube.com/watch?v=lBtV_H0V_xg
   
 
-
-
 # React React App
 
 ```
@@ -101,3 +99,18 @@ let h1Tag = <h1>Welcome</h1>
         calls render  function
 
 40 fps - 1 scene updated every 25 ms
+
+
+# Day 4
+
+- React router (react-router-dom)
+- Life Cycle
+- API Calls [Axios]
+
+
+- Life Cycle
+  - Cart [items: Array, amount, count]
+    - CartList [Table, render all the CartItem as row, items]
+      - CartItem 1 - item [many]
+      - CartItem 2
+    - CartSummary [amount, count]

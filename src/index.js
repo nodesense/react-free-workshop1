@@ -3,6 +3,8 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
+//webpack, extract text, css, post
+import "./index.css";
 // no curly brace, default import
 import App from './App';
 
