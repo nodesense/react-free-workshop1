@@ -19,11 +19,13 @@ https://www.townscript.com/e/react-redux-bootcamp-213142
 
 # Youtube
 
-Video/Audio is not edited, I have uploaded them as is.
+Video/Audio is not edited, uploaded them as is.
 
 
 - Day 1  https://www.youtube.com/watch?v=5V35TBC2uds
 - Day 2 https://www.youtube.com/watch?v=wQEtZILPi6A
+- Day 3 https://www.youtube.com/watch?v=lBtV_H0V_xg
+  
 
 
 
