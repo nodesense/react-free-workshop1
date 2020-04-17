@@ -106,6 +106,34 @@ class Counter extends React.Component {
         console.log('decrement called after', this.state.counter);
     }
 
+    // creation time, only once
+    componentDidMount() {
+        // called after first time mounted
+        // virtual dom is rendered into real dom very first time
+        console.log('Counter componentDidMount')
+        // API calls
+        // set timer
+        // Access DOM elements thorugh ref
+
+        // resources should not be part of state
+        this.timer = setInterval(() => {
+            this.setState({counter : this.state.counter +1});
+            console.log('Timer ', this.state.counter);
+        }, 5000)
+    }
+
+    // componentDidUpdate() // update cycle methods
+
+
+    //unmount
+    componentWillUnmount() {
+        console.log('Counter will unmount');
+        // cleanup resource
+        // canvas, clean memory
+        // api calls, cancel apis call
+        // clean the timers
+        clearInterval(this.timer);
+    }
 
 
     // State, Lifecycle - tomorrow

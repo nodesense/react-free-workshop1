@@ -18,6 +18,7 @@ const add = (a, b) => a + b
 function Home() {
     return (
         <div>
+            <h2>Home</h2>
             {/* Comment in JSX  */}
             <p>Welcome to product store</p>
             <p>number: {10}</p>

@@ -220,3 +220,65 @@ what happen,
       if key doesn't exist, it consider that the row is removed
         it won't do deep of that row, and its children
         
+
+
+# Day 5
+
+  Day 4 Recording shall be uploaded tonight
+
+  Routing
+  API Calls
+  componentDidMount
+  componentWillUnmount
+
+# Navigation - React Router DOM
+
+  Back/Forward/History (go)
+  Bookmarking
+
+  browserHistory - HTML5 - BrowserHistory
+    http(s)://example.com/mypage/myprofile
+
+    all browsers that supports html5
+    Good for SEO
+    Advanced Crawlers, such as Google, 
+      they execute JavaScript and capture the REAL DOM
+        react should be loaded wihtin time,
+        crawlers capture the REAL DOM
+
+        crawlers can follow <a href="/...">
+
+    Server side support
+      https://exmaple.com/myprofile - tab, refresh
+        The browser sends request to server asking for /myprofile page.
+        server doesn;t has this page, since this is react page
+
+  hash URL (#) // anchor <a id="mypage">, a reference inside the page
+    HashHistory
+
+    http(s)://example.com/#mypage/myprofile
+
+   Not good for SEO
+   Crawlers doesn't follow # url
+
+   Safer for browser, no server side support needed
+
+
+
+$ npm install --save react-router-dom
+
+
+
+Route 
+
+  <Route path="/about" component={About} />
+  <Route path="/about" >
+   {/* content children */ props.children}
+   <About />
+  </Route>
+  
+  <Rotue render= () => (JSX) />
+
+Lazy loading
+
+  

@@ -29,6 +29,9 @@ function Footer(props) {
         <div>
             <hr />
             <p>Copyrights {props.company.toUpperCase()}, @ {props.year}</p>
+
+            {props.children}
+
             {props.isOpen ? <p>Open</p>: <p>Closed</p>}
 
             {/* no for loop */}
